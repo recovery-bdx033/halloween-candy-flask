@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Halloween Candy Collector</title>
+</head>
+<body>
+    <h1>Bienvenue sur Halloween Candy Collector</h1>
+    <button onclick="startGame()">Lancer le jeu</button>
+    <button onclick="stopGame()">Arrêter le jeu</button>  <!-- Nouveau bouton -->
+
+    <script>
+        function startGame() {
+            fetch('/start-game').then(response => response.text()).then(data => {
+                alert(data);
+            });
+        }
+
+        function stopGame() {
+            fetch('/stop-game').then(response => response.text()).then(data => {
+                alert(data);
+            });
+        }
+    </script>
+</body>
+</html>
+
