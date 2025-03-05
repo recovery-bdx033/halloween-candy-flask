@@ -41,7 +41,6 @@ def stop_game():
         return "Aucun jeu en cours."
 
 if __name__ == "__main__":
-    from os import environ
-    port = int(environ.get("PORT", 5000))  # Render attribue un port automatiquement
+    port = int(os.environ.get("PORT", 10000))  # Render attribue un port automatiquement
     app.run(host="0.0.0.0", port=port)
 
